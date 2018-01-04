@@ -6,23 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 浩子的博客</title>
+  <title>Linux下SVN客户端的使用方法 | 浩子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="转自–话题在绕弯的Linux下SVN客户端的使用方法 一、SVN介绍https：协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议例：ylqzqf：仓库名">
+<meta name="keywords" content="svn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/01/04/hello-world/index.html">
+<meta property="og:title" content="Linux下SVN客户端的使用方法">
+<meta property="og:url" content="http://yoursite.com/2018/01/05/svn/index.html">
 <meta property="og:site_name" content="浩子的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2018-01-04T13:20:02.272Z">
+<meta property="og:description" content="转自–话题在绕弯的Linux下SVN客户端的使用方法 一、SVN介绍https：协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议例：ylqzqf：仓库名">
+<meta property="og:updated_time" content="2018-01-04T17:45:23.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Linux下SVN客户端的使用方法">
+<meta name="twitter:description" content="转自–话题在绕弯的Linux下SVN客户端的使用方法 一、SVN介绍https：协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议例：ylqzqf：仓库名">
   
     <link rel="alternative" href="/atom.xml" title="浩子的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/header.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -46,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/header.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">浩子</a></h1>
@@ -104,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/header.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">浩子</h1>
@@ -153,35 +154,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-svn" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Linux下SVN客户端的使用方法
     </h1>
   
 
         
-        <a href="/2018/01/04/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-04T13:20:02.272Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
+        <a href="/2018/01/05/svn/" class="archive-article-date">
+  	<time datetime="2018-01-04T16:49:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>转自–<a href="http://blog.csdn.net/a593796769" target="_blank" rel="noopener">话题在绕弯</a>的<a href="http://blog.csdn.net/a593796769/article/details/9232369" target="_blank" rel="noopener">Linux下SVN客户端的使用方法</a></p>
+<h2 id="一、SVN介绍"><a href="#一、SVN介绍" class="headerlink" title="一、SVN介绍"></a>一、SVN介绍</h2><p>https：协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议<br>例：ylqzqf：仓库名 </p>
+<a id="more"></a>
+<h2 id="二、svn功能说明"><a href="#二、svn功能说明" class="headerlink" title="二、svn功能说明"></a>二、svn功能说明</h2><h3 id="1-检出（check-out）"><a href="#1-检出（check-out）" class="headerlink" title="1.检出（check out）"></a>1.检出（check out）</h3><p>功能：<br>从SVN库中取出已有的文件。</p>
+<p>命令行操作：<br>在本地创建工作空间，创建一个空的文件夹<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;mkdir filename</span><br>在新建文件夹下执行命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn checkout path</span>（path是svn库地址） (简写命令<span style="color: red;">svn co</span>)</p>
+<h3 id="2-提交-commit"><a href="#2-提交-commit" class="headerlink" title="2.提交(commit)"></a>2.提交(commit)</h3><p>功能：<br>将工作复本中修改的文件或新添加的文件提交到服务器中，使修改正式生效；提交后其他人更新后即可获取你所做的修改。</p>
+<p>命令行操作：<br>对于已在版本控制列表中文件的修改后提交<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn commit –m “日志信息”要提交的文件</span>（简写命令<span style="color: red;">svn ci</span>）<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn commit –m “日志信息” file</span><br>往svn库中添加新的文件<br>先将文件加到版本控制列表中，命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn add file <br>&nbsp;&nbsp;&nbsp;&nbsp;$&gt;svn add file</span><br>然后“<span style="color: red;">svn commit</span>”</p>
+<h3 id="3-删除文件（svn-delete）"><a href="#3-删除文件（svn-delete）" class="headerlink" title="3.删除文件（svn delete）"></a>3.删除文件（svn delete）</h3><p>功能：<br>删除误提交或不需要的文件。</p>
+<p>命令行操作：<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn delete path -m “删除理由“ $&gt;svn delete http:// -m “删除理由” </span><br>然后在本地<span style="color: red;">svn update</span>，本地对应的文件将会删除。</p>
+<h3 id="4-更新（update）"><a href="#4-更新（update）" class="headerlink" title="4.更新（update）"></a>4.更新（update）</h3><p>功能：<br>获取其他用户对文件进行的修改，与自己的文件的修改进行合并，保证本地的文件总是最新的。</p>
+<p>命令行操作：<br>默认更新到最新版本<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn update file</span>（简写命令<span style="color: red;">svn up</span>）<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn update file</span><br>&nbsp;&nbsp;&nbsp;&nbsp;更新到指定版本<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn update –r m file</span></p>
+<h3 id="5-查看日志（svn-log）"><a href="#5-查看日志（svn-log）" class="headerlink" title="5.查看日志（svn log）"></a>5.查看日志（svn log）</h3><p>功能：<br>查看某一目录或某一文件的历史记录。</p>
+<p>命令行操作：<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn log file</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn log file</span></p>
+<h3 id="6-比较文件（-svn-diff-）"><a href="#6-比较文件（-svn-diff-）" class="headerlink" title="6.比较文件（ svn diff ）"></a>6.比较文件（ svn diff ）</h3><p>功能：<br>比较svn库中某一文件在不同版本中的修改情况。</p>
+<p>命令行操作：<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: ">svn diff file</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;"> $&gt;svn diff –r m:n file.c </span>（m、n为相比较的版本号）</p>
+<h3 id="7-Svn还原和回退（svn-revert-svn-merge）"><a href="#7-Svn还原和回退（svn-revert-svn-merge）" class="headerlink" title="7.Svn还原和回退（svn  revert/svn merge）"></a>7.Svn还原和回退（svn  revert/svn merge）</h3><p>功能：<br>svn还原（svn revert）还原在工作副本中已添加或已修改还未提交的文件；<br>回退（svn merge）将以提交svn库中的版本恢复到指定版本。</p>
+<p>命令行操作：<br>7.1 svn还原<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn revert file</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn revert file</span>（要恢复修改的目录或文件）<br>7.2 回退，需要通过合并的方法回退<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn merge –r m:n path</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn merge –r m:n path</span>（要回退的目录或文件）（从m版本回退到n版本）<br>然后提交（<span style="color: red;">svn commit</span>）</p>
+<h3 id="8-重新定位（Relocate）"><a href="#8-重新定位（Relocate）" class="headerlink" title="8.重新定位（Relocate）"></a>8.重新定位（Relocate）</h3><p>功能：<br>用于svn服务器更换地址后，指向新的SVN URL。</p>
+<p>命令行操作：<br>命令：<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">svn switch –relocate</span> 原svn库地址 新svn库地址<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">$&gt;svn switch –relocate</span> 原svn库地址 新svn库地址</p>
+<h3 id="9-其他技巧"><a href="#9-其他技巧" class="headerlink" title="9.其他技巧"></a>9.其他技巧</h3><ol>
+<li>导出（export）：<br>&nbsp;&nbsp;&nbsp;&nbsp;使用此功能获取一个没有SVN控制信息的工作复本，导出的文件没有.svn文件，不可直接执行提交<br>2.  导入（import）：<br>&nbsp;&nbsp;&nbsp;&nbsp;将本地文件导入到服务器中，一般用于初始svn库目录时<br>3.  清理（svn cleanup）：<br>&nbsp;&nbsp;&nbsp;&nbsp;当Subversion操作中断时，会有一些残留的操作信息保留在工作复本中，这时需要进行清理才能够重新进行工作；<br>4.  查看文件或目录状态（svn status）：<br>&nbsp;&nbsp;&nbsp;&nbsp;查看工作副本中某一目录下文件和子目录的状态，【正常状态不显示；?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定】</li>
+</ol>
+<h2 id="三、svn使用规范"><a href="#三、svn使用规范" class="headerlink" title="三、svn使用规范"></a>三、svn使用规范</h2><h3 id="日志书写规范"><a href="#日志书写规范" class="headerlink" title="日志书写规范"></a>日志书写规范</h3><p>日志内容长度要求<span style="color: red;">10个字符</span>以上，即5个汉字以上；<br>日志内容要求体现<span style="color: red;">操作内容</span>，如：增加xxx功能/ 修复xxx问题/ 删除xxx功能；<br>提交频率,要求<span style="color: red;">编译通过后提交一次</span>。</p>
 
       
 
@@ -195,7 +210,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -211,6 +226,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svn</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -261,7 +287,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/04/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/05/svn/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,15 +301,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/01/05/js/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js
-        
-      </div>
-    </a>
   
+    <a href="/2018/01/04/js/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -405,6 +427,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svn</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
