@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>浩子的博客</title>
+  <title>图片轮播 | 浩子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="浩子的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1 效果原理：展示窗口（父元素）设置overflow：hidden；图片（子元素）并排并滑动，完成图片切换效果。 2 代码：">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图片轮播">
+<meta property="og:url" content="http://yoursite.com/2018/01/05/lunbo/index.html">
 <meta property="og:site_name" content="浩子的博客">
+<meta property="og:description" content="1 效果原理：展示窗口（父元素）设置overflow：hidden；图片（子元素）并排并滑动，完成图片切换效果。 2 代码：">
+<meta property="og:updated_time" content="2018-01-04T18:53:41.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浩子的博客">
+<meta name="twitter:title" content="图片轮播">
+<meta name="twitter:description" content="1 效果原理：展示窗口（父元素）设置overflow：hidden；图片（子元素）并排并滑动，完成图片切换效果。 2 代码：">
   
     <link rel="alternative" href="/atom.xml" title="浩子的博客" type="application/atom+xml">
   
@@ -149,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-lunbo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-lunbo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/05/lunbo/">图片轮播</a>
+    <h1 class="article-title" itemprop="name">
+      图片轮播
     </h1>
   
 
@@ -172,12 +175,32 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="1-效果原理："><a href="#1-效果原理：" class="headerlink" title="1 效果原理："></a>1 效果原理：</h3><p>展示窗口（父元素）设置overflow：hidden；图片（子元素）并排并滑动，完成图片切换效果。</p>
-<h3 id="2-代码："><a href="#2-代码：" class="headerlink" title="2 代码："></a>2 代码：</h3>
-        
-          <a class="article-more-a" href="/2018/01/05/lunbo/#more">more >></a>
-        
+<h3 id="2-代码："><a href="#2-代码：" class="headerlink" title="2 代码："></a>2 代码：</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span>&gt;</span><br><span class="line">&lt;html xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;图片轮播 jq(左右切换)&lt;/title&gt;</span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">  body,div,ul,li,a,img&#123;margin: 0;padding: 0;&#125;</span><br><span class="line">  ul,li&#123;list-style: none;&#125;</span><br><span class="line">  a&#123;text-decoration: none;&#125;</span><br><span class="line">  <span class="comment">#wrapper&#123;position: relative;margin: 30px auto;width: 400px;height: 200px;&#125;</span></span><br><span class="line">  <span class="comment">#banner&#123;position:relative;width: 400px;height: 200px;overflow: hidden;&#125;</span></span><br><span class="line">  .imgList&#123;position:relative;width:2000px;height:200px;z-index: 10;overflow: hidden;&#125;</span><br><span class="line">  .imgList li&#123;<span class="built_in">float</span>:left;display: inline;&#125;</span><br><span class="line">  <span class="comment">#prev,</span></span><br><span class="line">  <span class="comment">#next&#123;position: absolute;top:80px;z-index: 20;cursor: pointer;opacity: 0.2;filter:alpha(opacity=20);&#125;</span></span><br><span class="line">  <span class="comment">#prev&#123;left: 10px;&#125;</span></span><br><span class="line">  <span class="comment">#next&#123;right: 10px;&#125;</span></span><br><span class="line">  <span class="comment">#prev:hover,</span></span><br><span class="line">  <span class="comment">#next:hover&#123;opacity: 0.5;filter:alpha(opacity=50);&#125;</span></span><br><span class="line">  .<span class="built_in">bg</span>&#123;position: absolute;bottom: 0;width: 400px;height: 40px;z-index:20;opacity: 0.4;filter:alpha(opacity=40);background: black;&#125;</span><br><span class="line">  .infoList&#123;position: absolute;left: 10px;bottom: 10px;z-index: 30;&#125;</span><br><span class="line">  .infoList li&#123;display: none;&#125;</span><br><span class="line">  .infoList .infoOn&#123;display: inline;color: white;&#125;</span><br><span class="line">  .indexList&#123;position: absolute;right: 10px;bottom: 5px;z-index: 30;&#125;</span><br><span class="line">  .indexList li&#123;<span class="built_in">float</span>: left;margin-right: 5px;padding: 2px 4px;border: 2px solid black;background: grey;cursor: pointer;&#125;</span><br><span class="line">  .indexList .indexOn&#123;background: red;font-weight: bold;color: white;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=<span class="string">"wrapper"</span>&gt;&lt;!-- 最外层部分 --&gt;</span><br><span class="line">    &lt;div id=<span class="string">"banner"</span>&gt;&lt;!-- 轮播部分 --&gt;</span><br><span class="line">      &lt;ul class=<span class="string">"imgList"</span>&gt;&lt;!-- 图片部分 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;&lt;img src=<span class="string">"./700d0i000000999c5C2AD_810_235_85.jpg"</span> width=<span class="string">"400px"</span> height=<span class="string">"200px"</span> alt=<span class="string">"puss in boots1"</span>&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;&lt;img src=<span class="string">"./700c0i0000009cqqjA935_810_235_85.jpg"</span> width=<span class="string">"400px"</span> height=<span class="string">"200px"</span> alt=<span class="string">"puss in boots2"</span>&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;&lt;img src=<span class="string">"./70040i0000009id6564B9_810_235_85.jpg"</span> width=<span class="string">"400px"</span> height=<span class="string">"200px"</span> alt=<span class="string">"puss in boots3"</span>&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;&lt;img src=<span class="string">"./70030i0000009s1v4D4D8_810_235_85.jpg"</span> width=<span class="string">"400px"</span> height=<span class="string">"200px"</span> alt=<span class="string">"puss in boots4"</span>&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">      &lt;img src=<span class="string">"./prev.png"</span> width=<span class="string">"20px"</span> height=<span class="string">"40px"</span> id=<span class="string">"prev"</span>&gt;</span><br><span class="line">      &lt;img src=<span class="string">"./next.png"</span> width=<span class="string">"20px"</span> height=<span class="string">"40px"</span> id=<span class="string">"next"</span>&gt;</span><br><span class="line">      &lt;div class=<span class="string">"bg"</span>&gt;&lt;/div&gt; &lt;!-- 图片底部背景层部分--&gt;</span><br><span class="line">      &lt;ul class=<span class="string">"infoList"</span>&gt;&lt;!-- 图片左下角文字信息部分 --&gt;</span><br><span class="line">        &lt;li class=<span class="string">"infoOn"</span>&gt;puss <span class="keyword">in</span> boots1&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;puss <span class="keyword">in</span> boots2&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;puss <span class="keyword">in</span> boots3&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;puss <span class="keyword">in</span> boots4&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">      &lt;ul class=<span class="string">"indexList"</span>&gt;&lt;!-- 图片右下角序号部分 --&gt;</span><br><span class="line">        &lt;li class=<span class="string">"indexOn"</span>&gt;1&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;2&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;3&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;4&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;!-- &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"./js/jquery.min.js"</span>&gt;&lt;/script&gt; --&gt;</span><br><span class="line">  &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">  var curIndex = 0, //当前index</span><br><span class="line">      imgLen = $(<span class="string">".imgList li"</span>).length; //图片总数</span><br><span class="line">     // 定时器自动变换2.5秒每次</span><br><span class="line">  var autoChange = setInterval(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    <span class="keyword">if</span>(curIndex &lt; imgLen-1)&#123; </span><br><span class="line">      curIndex ++; </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">      curIndex = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    //调用变换处理函数</span><br><span class="line">    changeTo(curIndex); </span><br><span class="line">  &#125;,2500);</span><br><span class="line">   //左箭头滑入滑出事件处理</span><br><span class="line">  $(<span class="string">"#prev"</span>).hover(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    //滑入清除定时器</span><br><span class="line">    clearInterval(autoChange);</span><br><span class="line">  &#125;,<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    //滑出则重置定时器</span><br><span class="line">    autoChangeAgain();</span><br><span class="line">  &#125;);</span><br><span class="line">  //左箭头点击处理</span><br><span class="line">  $(<span class="string">"#prev"</span>).click(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    //根据curIndex进行上一个图片处理</span><br><span class="line">    curIndex = (curIndex &gt; 0) ? (--curIndex) : (imgLen - 1);</span><br><span class="line">    changeTo(curIndex);</span><br><span class="line">  &#125;);</span><br><span class="line">  //右箭头滑入滑出事件处理</span><br><span class="line">  $(<span class="string">"#next"</span>).hover(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    //滑入清除定时器</span><br><span class="line">    clearInterval(autoChange);</span><br><span class="line">  &#125;,<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    //滑出则重置定时器</span><br><span class="line">    autoChangeAgain();</span><br><span class="line">  &#125;);</span><br><span class="line">  //右箭头点击处理</span><br><span class="line">  $(<span class="string">"#next"</span>).click(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">    curIndex = (curIndex &lt; imgLen - 1) ? (++curIndex) : 0;</span><br><span class="line">    changeTo(curIndex);</span><br><span class="line">  &#125;);</span><br><span class="line">  //对右下角按钮index进行事件绑定处理等</span><br><span class="line">  $(<span class="string">".indexList"</span>).find(<span class="string">"li"</span>).each(<span class="keyword">function</span>(item)&#123; </span><br><span class="line">    $(this).hover(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">      clearInterval(autoChange);</span><br><span class="line">      changeTo(item);</span><br><span class="line">      curIndex = item;</span><br><span class="line">    &#125;,<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">      autoChangeAgain();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  //清除定时器时候的重置定时器--封装</span><br><span class="line">  <span class="keyword">function</span> <span class="function"><span class="title">autoChangeAgain</span></span>()&#123; </span><br><span class="line">      autoChange = setInterval(<span class="function"><span class="title">function</span></span>()&#123; </span><br><span class="line">      <span class="keyword">if</span>(curIndex &lt; imgLen-1)&#123; </span><br><span class="line">        curIndex ++;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        curIndex = 0;</span><br><span class="line">      &#125;</span><br><span class="line">    //调用变换处理函数</span><br><span class="line">      changeTo(curIndex); </span><br><span class="line">    &#125;,2500);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">function</span> changeTo(num)&#123; </span><br><span class="line">    var goLeft = num * 400;</span><br><span class="line">    $(<span class="string">".imgList"</span>).animate(&#123;left: <span class="string">"-"</span> + goLeft + <span class="string">"px"</span>&#125;,500);</span><br><span class="line">    $(<span class="string">".infoList"</span>).find(<span class="string">"li"</span>).removeClass(<span class="string">"infoOn"</span>).eq(num).addClass(<span class="string">"infoOn"</span>);</span><br><span class="line">    $(<span class="string">".indexList"</span>).find(<span class="string">"li"</span>).removeClass(<span class="string">"indexOn"</span>).eq(num).addClass(<span class="string">"indexOn"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3-效果"><a href="#3-效果" class="headerlink" title="3 效果"></a>3 效果</h3><iframe src="/photos_Scrolling_domo/test.html" frameborder="2" width="460" scrolling="no" height="270"><br></iframe>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -197,16 +220,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/05/lunbo/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/05/lunbo/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/05/svn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下SVN客户端的使用方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -226,162 +308,14 @@
 
 
 
-
   
-    <article id="post-svn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/05/svn/">Linux下SVN客户端的使用方法</a>
-    </h1>
   
 
-        
-        <a href="/2018/01/05/svn/" class="archive-article-date">
-  	<time datetime="2018-01-04T16:49:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转自–<a href="http://blog.csdn.net/a593796769" target="_blank" rel="noopener">话题在绕弯</a>的<a href="http://blog.csdn.net/a593796769/article/details/9232369" target="_blank" rel="noopener">Linux下SVN客户端的使用方法</a></p>
-<h2 id="一、SVN介绍"><a href="#一、SVN介绍" class="headerlink" title="一、SVN介绍"></a>一、SVN介绍</h2><p>https：协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议<br>例：ylqzqf：仓库名 </p>
-        
-          <a class="article-more-a" href="/2018/01/05/svn/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/05/svn/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/04/js/">滚屏加载</a>
-    </h1>
   
 
-        
-        <a href="/2018/01/04/js/" class="archive-article-date">
-  	<time datetime="2018-01-03T16:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-效果原理："><a href="#1-效果原理：" class="headerlink" title="1 效果原理："></a>1 效果原理：</h3><p>(1) 获取HTML元素高度以及浏览器可视高度。<br>(2) 判断页面是否滚动到底部，触发加载函数。<br>(3) 加载元素(亦可做成把原先隐藏的元素显示)。</p>
-<h3 id="2-代码："><a href="#2-代码：" class="headerlink" title="2 代码："></a>2 代码：</h3>
-        
-          <a class="article-more-a" href="/2018/01/04/js/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/04/js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -404,8 +338,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

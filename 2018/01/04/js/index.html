@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js | 浩子的博客</title>
+  <title>滚屏加载 | 浩子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux下SVN客户端的使用方法 Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy">
+  <meta name="description" content="1 效果原理：(1) 获取HTML元素高度以及浏览器可视高度。(2) 判断页面是否滚动到底部，触发加载函数。(3) 加载元素(亦可做成把原先隐藏的元素显示)。 2 代码：">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js">
+<meta property="og:title" content="滚屏加载">
 <meta property="og:url" content="http://yoursite.com/2018/01/04/js/index.html">
 <meta property="og:site_name" content="浩子的博客">
-<meta property="og:description" content="Linux下SVN客户端的使用方法 Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy">
-<meta property="og:updated_time" content="2018-01-04T16:53:10.059Z">
+<meta property="og:description" content="1 效果原理：(1) 获取HTML元素高度以及浏览器可视高度。(2) 判断页面是否滚动到底部，触发加载函数。(3) 加载元素(亦可做成把原先隐藏的元素显示)。 2 代码：">
+<meta property="og:updated_time" content="2018-01-04T18:52:24.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js">
-<meta name="twitter:description" content="Linux下SVN客户端的使用方法 Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy">
+<meta name="twitter:title" content="滚屏加载">
+<meta name="twitter:description" content="1 效果原理：(1) 获取HTML元素高度以及浏览器可视高度。(2) 判断页面是否滚动到底部，触发加载函数。(3) 加载元素(亦可做成把原先隐藏的元素显示)。 2 代码：">
   
     <link rel="alternative" href="/atom.xml" title="浩子的博客" type="application/atom+xml">
   
@@ -160,7 +161,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js
+      滚屏加载
     </h1>
   
 
@@ -173,16 +174,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Linux下SVN客户端的使用方法</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h3 id="1-效果原理："><a href="#1-效果原理：" class="headerlink" title="1 效果原理："></a>1 效果原理：</h3><p>(1) 获取HTML元素高度以及浏览器可视高度。<br>(2) 判断页面是否滚动到底部，触发加载函数。<br>(3) 加载元素(亦可做成把原先隐藏的元素显示)。</p>
+<h3 id="2-代码："><a href="#2-代码：" class="headerlink" title="2 代码："></a>2 代码：</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE=html&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"http://code.jquery.com/jquery-1.4.1.js"</span> <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;  </span><br><span class="line">  </span><br><span class="line">   &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;  </span><br><span class="line">    $(document).ready(<span class="function"><span class="title">function</span></span>()&#123;  </span><br><span class="line">        var range = 50;             //距下边界长度/单位px  </span><br><span class="line">        var elemt = 500;           //插入元素高度/单位px  </span><br><span class="line">        var maxnum = 20;            //设置加载最多次数  </span><br><span class="line">        var num = 1;  </span><br><span class="line">        var totalheight = 0;   </span><br><span class="line">        var main = $(<span class="string">"#content"</span>);                     //主体元素  </span><br><span class="line">        $(window).scroll(<span class="function"><span class="title">function</span></span>()&#123;  </span><br><span class="line">            var srollPos = $(window).scrollTop();    //滚动条距顶部距离(页面超出窗口的高度)  </span><br><span class="line">              </span><br><span class="line">            //console.log(<span class="string">"滚动条到顶部的垂直高度: "</span>+$(document).scrollTop());  </span><br><span class="line">            //console.log(<span class="string">"页面的文档高度 ："</span>+$(document).height());  </span><br><span class="line">            //console.log(<span class="string">'浏览器的高度：'</span>+$(window).height());  </span><br><span class="line">              </span><br><span class="line">            totalheight = parseFloat($(window).height()) + parseFloat(srollPos);  </span><br><span class="line">            <span class="keyword">if</span>(($(document).height()-range) &lt;= totalheight  &amp;&amp; num != maxnum) &#123;  </span><br><span class="line">                main.append(<span class="string">"&lt;div style='border:1px solid tomato;margin-top:20px;color:#ac"</span>+(num%20)+(num%20)+<span class="string">";height:"</span>+elemt+<span class="string">"' &gt;hello world"</span>+srollPos+<span class="string">"---"</span>+num+<span class="string">"&lt;/div&gt;"</span>);  </span><br><span class="line">                num++;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;);  </span><br><span class="line">    &lt;/script&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">    &lt;div id=<span class="string">"content"</span> style=<span class="string">"height:960px"</span>&gt;  </span><br><span class="line">        &lt;div id=<span class="string">"follow"</span>&gt;this is a scroll <span class="built_in">test</span>;&lt;br/&gt;    页面下拉自动加载内容&lt;/div&gt;  </span><br><span class="line">        &lt;div style=<span class="string">'border:1px solid tomato;margin-top:20px;color:#ac1;height:800'</span> &gt;hello world <span class="built_in">test</span> DIV&lt;/div&gt;  </span><br><span class="line">          </span><br><span class="line">    &lt;/div&gt;  </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3-效果"><a href="#3-效果" class="headerlink" title="3 效果"></a>3 效果</h3><iframe src="/Scrolling_demo/Scrolling_demo.html" frameborder="2" width="900" scrolling="" height="500"><br></iframe>
       
 
       
@@ -211,6 +206,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -405,6 +411,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">svn</a>
