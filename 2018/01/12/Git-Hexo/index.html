@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="浩子的博客">
 <meta property="og:description" content="转自–话题在绕弯的使用hexo+github搭建免费个人博客详细教程 一、准备工作：1 github账号2 安装了node.js、npm 二、搭建github博客1 创建仓库新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 http://test">
 <meta property="og:image" content="http://image.liuxianan.com/201608/20160823_191336_238_8683.png">
-<meta property="og:updated_time" content="2018-01-12T05:51:54.994Z">
+<meta property="og:updated_time" content="2018-01-12T05:53:54.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git+Hexo搭建个人博客">
 <meta name="twitter:description" content="转自–话题在绕弯的使用hexo+github搭建免费个人博客详细教程 一、准备工作：1 github账号2 安装了node.js、npm 二、搭建github博客1 创建仓库新建一个名为你的用户名.github.io的仓库，比如说，如果你的github用户名是test，那么你就新建test.github.io的仓库（必须是你的用户名，其它名称无效），将来你的网站访问地址就是 http://test">
@@ -182,6 +182,10 @@
 <p>(1)注册的邮箱一定要验证，否则不会成功；<br>(2)仓库名字必须是：<span style="color: orange;">username.github.io</span>，其中<span style="color: orange;">username</span>是你的用户名；<br>(3)仓库创建成功不会立即生效，需要过一段时间，大概10-30分钟，或者更久，我的等了半个小时才生效；<br>创建成功后，默认会在你这个仓库里生成一些示例页面，以后你的网站所有代码都是放在这个仓库里啦。</p>
 <h3 id="2-绑定域名"><a href="#2-绑定域名" class="headerlink" title="2 绑定域名"></a>2 绑定域名</h3><p>当然，你不绑定域名肯定也是可以的，就用默认的 <span style="color: orange;">xxx.github.io</span> 来访问，如果你想更个性一点，想拥有一个属于自己的域名，那也是OK的。</p>
 <p>首先你要注册一个域名，域名注册以前总是推荐去<span style="color: orange;">godaddy</span>，现在觉得其实国内的阿里云也挺不错的，价格也不贵，毕竟是大公司，放心！<br>绑定域名分2种情况：带www和不带www的。<br>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下你的用户名.github.io的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向你的用户名.github.io，这样可以保证无论是否添加www都可以访问，如下：<br><img src="http://image.liuxianan.com/201608/20160823_191336_238_8683.png"><br>然后到你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好，因为经测试：<br>如果你填写的是没有www的，比如 mygit.me，那么无论是访问 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a> 还是 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，都会自动跳转到 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a><br>如果你填写的是带www的，比如 www.mygit.me ，那么无论是访问 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a> 还是 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，都会自动跳转到 <a href="http://www.mygit.me" target="_blank" rel="noopener">http://www.mygit.me</a><br>如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 <a href="http://abc.mygit.me" target="_blank" rel="noopener">http://abc.mygit.me</a> 没问题，但是访问 <a href="http://mygit.me" target="_blank" rel="noopener">http://mygit.me</a> ，不会自动跳转到 <a href="http://abc.mygit.me" target="_blank" rel="noopener">http://abc.mygit.me</a><br>另外说一句，在你绑定了新域名之后，原来的<span style="color: orange;">你的用户名.github.io</span>并没有失效，而是会自动跳转到你的新域名。</p>
+<h3 id="2-配置SSH-key"><a href="#2-配置SSH-key" class="headerlink" title="2 配置SSH key"></a>2 配置SSH key</h3><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。<br>用git bash执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br></pre></td></tr></table></figure></p>
+<p>如果提示：No such file or directory 说明你是第一次使用git。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址"</span></span><br></pre></td></tr></table></figure></p>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
+<p>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
 
       
 
