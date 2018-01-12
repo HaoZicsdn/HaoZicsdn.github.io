@@ -149,6 +149,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-xampp-port" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/12/xampp-port/">XAMPP端口占用解决</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/12/xampp-port/" class="archive-article-date">
+  	<time datetime="2018-01-12T07:10:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转自–<span style="color: orange;">MingChaoSun</span>的<a href="http://blog.csdn.net/sunmc1204953974/article/details/50423671" target="_blank" rel="noopener">XAMPP端口占用问题的解决</a></p>
+<h2 id="一、错误："><a href="#一、错误：" class="headerlink" title="一、错误："></a>一、错误：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">17:05:33  [Apache] Error: Apache shutdown unexpectedly.</span><br><span class="line">17:05:33  [Apache] This may be due to a blocked port, missing dependencies, </span><br><span class="line">17:05:33  [Apache] improper privileges, a crash, or a shutdown by another method.</span><br><span class="line">17:05:33  [Apache] Check the <span class="string">"/xampp/apache/logs/error.log"</span> file</span><br><span class="line">17:05:33  [Apache] and the Windows Event Viewer <span class="keyword">for</span> more clues</span><br></pre></td></tr></table></figure>
+<h2 id="二、解决："><a href="#二、解决：" class="headerlink" title="二、解决："></a>二、解决：</h2><p>其实这个问题就是端口被占用了，下面是修改方法<br>自己修改两个端口：</p>
+<p>1.到这个目录下\ xampp\apache\conf ，打开httpd.conf，将里边的80端口全部改成一个未被占用的端口，比如8001</p>
+<p>2.到这个目录 \ xampp\apache\conf\extra ，打开httpd-ssl.conf ，将文件里的443端口全部换成一个未被占用的端口，比如4431</p>
+<p>我将端口修改之后，端口冲突的问题就解决了，希望对大家有所帮助~</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">xampp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/12/xampp-port/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git-Hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
