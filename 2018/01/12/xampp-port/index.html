@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/12/xampp-port/index.html">
 <meta property="og:site_name" content="浩子的博客">
 <meta property="og:description" content="转自–MingChaoSun的XAMPP端口占用问题的解决 一、错误：1234517:05:33  [Apache] Error: Apache shutdown unexpectedly.17:05:33  [Apache] This may be due to a blocked port, missing dependencies, 17:05:33  [Apache] improper p">
-<meta property="og:updated_time" content="2018-01-12T07:15:10.472Z">
+<meta property="og:updated_time" content="2018-01-12T07:15:30.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XAMPP端口占用解决">
 <meta name="twitter:description" content="转自–MingChaoSun的XAMPP端口占用问题的解决 一、错误：1234517:05:33  [Apache] Error: Apache shutdown unexpectedly.17:05:33  [Apache] This may be due to a blocked port, missing dependencies, 17:05:33  [Apache] improper p">
@@ -176,8 +176,7 @@
 <h2 id="一、错误："><a href="#一、错误：" class="headerlink" title="一、错误："></a>一、错误：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">17:05:33  [Apache] Error: Apache shutdown unexpectedly.</span><br><span class="line">17:05:33  [Apache] This may be due to a blocked port, missing dependencies, </span><br><span class="line">17:05:33  [Apache] improper privileges, a crash, or a shutdown by another method.</span><br><span class="line">17:05:33  [Apache] Check the <span class="string">"/xampp/apache/logs/error.log"</span> file</span><br><span class="line">17:05:33  [Apache] and the Windows Event Viewer <span class="keyword">for</span> more clues</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h2 id="二、解决："><a href="#二、解决：" class="headerlink" title="二、解决："></a>二、解决：</h2><p>其实这个问题就是端口被占用了，下面是修改方法<br>自己修改两个端口：</p>
-<p>1.到这个目录下\ xampp\apache\conf ，打开httpd.conf，将里边的80端口全部改成一个未被占用的端口，比如8001</p>
-<p>2.到这个目录 \ xampp\apache\conf\extra ，打开httpd-ssl.conf ，将文件里的443端口全部换成一个未被占用的端口，比如4431</p>
+<p>1.到这个目录下\ xampp\apache\conf ，打开httpd.conf，将里边的80端口全部改成一个未被占用的端口，比如8001<br>2.到这个目录 \ xampp\apache\conf\extra ，打开httpd-ssl.conf ，将文件里的443端口全部换成一个未被占用的端口，比如4431</p>
 <p>我将端口修改之后，端口冲突的问题就解决了，希望对大家有所帮助~</p>
 
       
