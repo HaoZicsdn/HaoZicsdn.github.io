@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Composer安装 | 浩子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载php -r”readfile(‘https://getcomposer.org/installer&amp;#39;);&amp;quot;|p">
+  <meta name="description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载1php -r&quot;readfile(&apos;https://getcomposer.org/installer&apos;);&quot;|php">
 <meta name="keywords" content="composer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Composer安装">
 <meta property="og:url" content="http://yoursite.com/2018/01/13/composer/index.html">
 <meta property="og:site_name" content="浩子的博客">
-<meta property="og:description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载php -r”readfile(‘https://getcomposer.org/installer&amp;#39;);&amp;quot;|p">
-<meta property="og:updated_time" content="2018-01-13T08:04:17.735Z">
+<meta property="og:description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载1php -r&quot;readfile(&apos;https://getcomposer.org/installer&apos;);&quot;|php">
+<meta property="og:updated_time" content="2018-01-13T08:06:03.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Composer安装">
-<meta name="twitter:description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载php -r”readfile(‘https://getcomposer.org/installer&amp;#39;);&amp;quot;|p">
+<meta name="twitter:description" content="一、安装composer1 安装方式(1) WIN安装Composer-Setup.exe (2) 通用安装composer.phar 2 下载composer.phar(1) 直接下载http://getcomposer.org/download/ (2) 命令行下载1php -r&quot;readfile(&apos;https://getcomposer.org/installer&apos;);&quot;|php">
   
     <link rel="alternative" href="/atom.xml" title="浩子的博客" type="application/atom+xml">
   
@@ -175,13 +175,14 @@
         <h1 id="一、安装composer"><a href="#一、安装composer" class="headerlink" title="一、安装composer"></a>一、安装composer</h1><h3 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1 安装方式"></a>1 安装方式</h3><p>(1) WIN安装<br><span style="color: orange;">Composer-Setup.exe</span></p>
 <p>(2) 通用安装<br><span style="color: orange;">composer.phar</span></p>
 <h3 id="2-下载composer-phar"><a href="#2-下载composer-phar" class="headerlink" title="2 下载composer.phar"></a>2 下载composer.phar</h3><p>(1) 直接下载<br><a href="http://getcomposer.org/download/" target="_blank" rel="noopener">http://getcomposer.org/download/</a></p>
-<p>(2) 命令行下载<br><span style="color: orange;">php -r”readfile(‘<a href="https://getcomposer.org/installer&#39;);&quot;|php" target="_blank" rel="noopener">https://getcomposer.org/installer&#39;);&quot;|php</a></span><br><a id="more"></a></p>
+<p>(2) 命令行下载<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r<span class="string">"readfile('https://getcomposer.org/installer');"</span>|php</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="3-安装-局部安装、全局安装"><a href="#3-安装-局部安装、全局安装" class="headerlink" title="3 安装(局部安装、全局安装)"></a>3 安装(局部安装、全局安装)</h3><p>(1) 局部安装<br>将<span style="color: orange;">composer.phar</span>文件复制到任意目录(比如项目根目录下)，然后通过<span style="color: orange;">php composer.phar</span>指令即可使用Composer了！</p>
 <p>(2) 全局安装<br>Mac或Linux系统:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv composer.phar/usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure></p>
 <p>Win系统:<br>将<span style="color: orange;">composer.phar</span>拷贝到php.exe同级目录;<br>新建<span style="color: orange;">composer.bat</span>文件，并将下面代码保存到文件中。 <span style="color: orange;">@php “%~dp0composer.phar” %*</span><br>然后使用CMD里面使用命令 <span style="color: orange;">composer -v</span>打开composer</p>
 <h3 id="4-Composer中国全量镜像"><a href="#4-Composer中国全量镜像" class="headerlink" title="4 Composer中国全量镜像"></a>4 Composer中国全量镜像</h3><p>(1) 镜像说明<br>安装包的数据是从github.com上下载的，安装包的元数据是从packgist.org上下载的。国外的网站连接速度很慢，并且随时可能被墙。Composer中国全量镜像所做的就是缓存所有安装包和元数据到国内的机房并且通过国内的CDN经行加速，这样就不必再去向国外的网站发起请求。<br>(2) 配置<br>查看当前的镜像地址：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer config-g repo.packagist</span><br><span class="line">composer config -gl</span><br></pre></td></tr></table></figure></p>
 <p>启用本镜像服务：<br>系统全局配置，单个项目配置<br>全局配置：<br>CMD或者终端中输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure></p>
-<p>项目配置：<br>在项目根目录下创建<span style="color: orange;">composer.json</span>文件，文件里面写入<span style="color: orange;">{}</span><br>打开CMD或者终端，进入项目根目录，输入以下命令：<br><span style="color: orange;">composer config repo.packagist composer <a href="https://packagist.phpcomposer.com" target="_blank" rel="noopener">https://packagist.phpcomposer.com</a></span></p>
+<p>项目配置：<br>在项目根目录下创建<span style="color: orange;">composer.json</span>文件，文件里面写入<span style="color: orange;">{}</span><br>打开CMD或者终端，进入项目根目录，输入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure></p>
 <h2 id="二、使用composer"><a href="#二、使用composer" class="headerlink" title="二、使用composer"></a>二、使用composer</h2><h3 id="1-搜索-search"><a href="#1-搜索-search" class="headerlink" title="1 搜索(search)"></a>1 搜索(search)</h3><p><span style="color: orange;">composer search monolog</span></p>
 <h3 id="2-展示-show"><a href="#2-展示-show" class="headerlink" title="2 展示(show)"></a>2 展示(show)</h3><p><span style="color: orange;">composer show –all monolog/monolog</span></p>
 <h3 id="3-申明依赖-require"><a href="#3-申明依赖-require" class="headerlink" title="3 申明依赖(require)"></a>3 申明依赖(require)</h3><p><span style="color: orange;">composer.json</span>中的<span style="color: orange;">require</span>，加入代码 <span style="color: orange;">“monolog/monolog”:”1.23.*”</span><br>或者在CMD输入 <span style="color: orange;">composer require symfony/http-foundation</span></p>
