@@ -149,6 +149,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-realm-name" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/19/realm-name/">虚拟域名配置</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/19/realm-name/" class="archive-article-date">
+  	<time datetime="2018-05-19T07:23:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、虚拟域名"><a href="#一、虚拟域名" class="headerlink" title="一、虚拟域名"></a>一、虚拟域名</h2><h3 id="什么是虚拟域名"><a href="#什么是虚拟域名" class="headerlink" title="什么是虚拟域名"></a>什么是虚拟域名</h3><p>通过配置虚拟域名，当浏览器输入配置好的虚拟域名时候，会访问预先配置好的本地项目，而不是网上的真实域名。—沃兹基.黠硕德</p>
+<h2 id="二、WIN环境下apache虚拟域名配置"><a href="#二、WIN环境下apache虚拟域名配置" class="headerlink" title="二、WIN环境下apache虚拟域名配置"></a>二、WIN环境下apache虚拟域名配置</h2><h3 id="1-本地host配置"><a href="#1-本地host配置" class="headerlink" title="1 本地host配置"></a>1 本地host配置</h3><p>访问一个域名，通过dns服务器得到该域名所指向的服务器ip地址，然后通过ip地址和服务器建立连接，完成剩下的事情。开发过程中，我们利用hosts文件就可以在没有网络域名的时候模拟一个本地的虚拟域名。在本机利用虚拟域名就可以直接访问相关项目目录，而不用一遍遍的输入项目的路径。<br>我们找到c:\windows\system32\drivers\etc\hosts文件，用编辑器打开它，在末尾添加如下代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 league.cn</span><br><span class="line">127.0.0.1 league.com</span><br><span class="line">127.0.0.1 www.league.cn</span><br><span class="line">127.0.0.1 www.league.com</span><br></pre></td></tr></table></figure></p>
+<p>保存。这样，访问league.cn、league.com、www.league.cn、www.league.com时候就会跳到127.0.0.1。<br>
+        
+          <a class="article-more-a" href="/2018/05/19/realm-name/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">虚拟域名</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/19/realm-name/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-composer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
